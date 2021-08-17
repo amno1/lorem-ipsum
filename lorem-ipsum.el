@@ -27,11 +27,11 @@
     "commodo" "odio" "cursus" "in" "hac" "habitasse" "platea" "dictumst"
     "quisque" "sagittis" "purus" "sit"])
 
-(defun word () (aref *words* (random (length *words*))))
+(defun lorem-ipsum-word () (aref *words* (random (length *words*))))
 
-(defun words (n) (cl-loop repeat n collect (word)))
+(defun lorem-ipsum-words (n) (cl-loop repeat n collect (word)))
 
-(cl-defun paragraph (&key (word-count 50) (prologue t))
+(cl-defun lorem-ipsum-paragraph (&key (word-count 50) (prologue t))
   (with-output-to-string
     (with-current-buffer standard-output
       (let ((words-remaining word-count)
@@ -67,7 +67,7 @@
          (go :end-paragraph)
          :end)))))
 
-(cl-defun paragraphs (n &key (word-count 50) (prologue t))
+(cl-defun lorem-ipsum-paragraphs (n &key (word-count 50) (prologue t))
   (cl-loop with prologue = prologue
         repeat n
         collect (paragraph :word-count word-count :prologue prologue)

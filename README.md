@@ -33,6 +33,17 @@ LOREM-IPSUM> (paragraphs 3)
  "Interdum quisque porttitor magna placerat. Eleifend accumsan. Id ultrices mattis magnis porttitor. Fermentum, sem, hac dolore scelerisque in blandit fermentum. In nisi labore, orci vestibulum donec consectetur. Consectetur tortor. Varius, est facilisi magnis potenti platea euismod at. Montes ultricies maecenas venenatis cras magnis montes potenti, porta. Pulvinar dignissim, dignissim metus.")
 ```
 
+## Emacs lisp note
+
+All functions are prefixed with lorem-ipsum- prefix (for example `lorem-ipsum-word'). Global variables are left ear-muffed and not prefixed.
+
+Besided that, all examples work exactly same as in CL (thanks to cl-lib). Call either from M-: (eval-expression) or from elisp code:
+
+```emacs-lisp
+M-: (paragraph :word-count 10)
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, neque ultrices gravida. Cras cursus nisi et, sem gravida nibh."
+```
+
 ## License
 
 MIT
